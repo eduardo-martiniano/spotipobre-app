@@ -1,0 +1,64 @@
+#input-url {
+    width: 50%;
+    min-width: 100px;
+    max-width: 500px;
+}
+
+#input-format {
+    width: 20%;
+    min-width: 30px;
+    max-width: 100px;
+}
+
+#title {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.div-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#div-button-convert {
+    display: flex;
+    justify-content: center;
+}
+
+#button-convert {
+    width: 70%;
+    max-width: 400px;
+    height: 45px;
+}
+
+@media(max-width: 470px) {
+    .div-inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    #input-format {
+        width: 90%;
+        min-width: 100px;
+        max-width: 500px;
+    }
+
+    #input-url {
+        width: 90%;
+        min-width: 100px;
+        max-width: 500px;
+    }
+    #button-convert {
+        width: 90%;
+    }
+}
