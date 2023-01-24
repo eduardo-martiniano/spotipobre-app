@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SpotiService {
 
-  private baseUrl = "http://localhost:80/";
+  private baseUrl = "http://localhost:3001/";
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +26,6 @@ export class SpotiService {
         a.setAttribute('download', '');
       a.click();
     } else if(res.status == 400) {
-      // alert("Invalid url");
     }
   }
 

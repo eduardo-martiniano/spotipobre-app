@@ -5,7 +5,7 @@
 
 <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Um por vez"> 
-        <h2 id="title">Converter video do Youtube</h2>
+        <h2 id="title">Converter</h2>
         <div class="container">
             <div class="div-inputs">
                 <mat-form-field appearance="outline" id="input-url">
@@ -16,12 +16,13 @@
                     <mat-label>Formato</mat-label>
                     <mat-select [(ngModel)]="format">
                         <mat-option value="downloadmp3">MP3</mat-option>
-                        <mat-option value="downloadmp4">MP4</mat-option>
+                        <mat-option [disabled]="true" value="downloadmp4">MP4</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div id="div-button-convert">
                 <button mat-raised-button
+                    [ngClass]="{'button--loading' : convertButtonDisabled}" 
                     [disabled]=convertButtonDisabled 
                     color="primary" 
                     (click)="convert()" 

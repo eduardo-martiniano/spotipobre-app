@@ -28,13 +28,17 @@ export class HomeComponent implements OnInit {
             duration: 3 * 1000
           });
           this.url = ""; 
-        })
+        }).catch((message) => {
+          this.snackBar.open(message, "Fechar");
+          this.convertButtonDisabled = false;
+        });
       }
       else {
         this.snackBar.open("URL invalida", "Fechar");
         this.url = "";
+        this.convertButtonDisabled = false;
       }
-    })
+    });
 
   }
 
