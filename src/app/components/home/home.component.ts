@@ -9,6 +9,7 @@ import { SpotiService } from 'src/app/services/spoti.service';
 })
 export class HomeComponent implements OnInit {
 
+  date = new Date().getFullYear();
   public convertButtonDisabled = false;
   public format = 'downloadmp3';
   public url = "https://www.youtube.com/watch?v=Iy-dJwHVX84&list=RDIy-dJwHVX84&start_radio=1&ab_channel=KendrickLamar-Topic";
