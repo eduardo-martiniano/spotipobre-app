@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   date = new Date().getFullYear();
   converting = false;
   format = 'downloadmp3';
-  url = 'https://www.youtube.com/watch?v=Iy-dJwHVX84&list=RDIy-dJwHVX84&start_radio=1&ab_channel=KendrickLamar-Topic';
+  url = '';
 
   constructor(
     private spotiService: SpotiService,
