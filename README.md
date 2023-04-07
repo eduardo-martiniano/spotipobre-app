@@ -1,27 +1,42 @@
-# SpotipobreApp
+# Bem-vindo ao SpotiPobre
+Este é um projeto SPA desenvolvido em Angular para converter vídeos do YouTube em arquivos de áudio no formato MP3. 
+Aqui você encontrará informações para rodar o projeto e usá-lo.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+# Como rodar o projeto
+Existem duas formas de rodar o projeto: apenas o Frontend ou com a API integrada. Veja como executar cada uma delas:
 
-## Development server
+# Somente o Frontend
+Para rodar somente o app, siga os passos abaixo:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Clone o projeto para o seu computador
 
-## Code scaffolding
+- Abra um terminal na pasta do projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Execute os seguintes comandos:
 
-## Build
+```
+npm i
+```
+```
+ng s
+```
+Agora, ele estará disponível em http://localhost/80.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Backend + Frontend
+Para rodar o projeto com o Backend integrado, siga os passos abaixo:
 
-## Running unit tests
+- Clone o projeto da branch "docker-compose"
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Abra um terminal na pasta do projeto
 
-## Running end-to-end tests
+- Execute o seguinte comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+docker-compose up --build
+```
 
-## Further help
+Com esse comando, você irá construir e executar os containers da API e do frontend. Agora, a aplicação completa estará disponível em http://localhost:80.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Considerações finais
+Espero que esse projeto possa ajudar em suas necessidades de conversão de vídeos do YouTube em arquivos de áudio. Sinta-se livre para contribuir com o projeto, reportando bugs ou sugerindo melhorias. Agradecemos pela sua visita!
