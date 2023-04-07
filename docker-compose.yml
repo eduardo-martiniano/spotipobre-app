@@ -1,0 +1,18 @@
+version: "3.9"
+
+volumes:
+    PersonDB:
+
+services:
+    app:
+        build: 
+            context: ./
+            dockerfile: spotipobre-app/Dockerfile
+        ports:
+            - "80:80"
+    api:
+        build:
+            context: .
+            dockerfile: spotipobre-api/Dockerfile
+        ports:
+            - "3001:3001"

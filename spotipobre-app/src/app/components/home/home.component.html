@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <div id="logo-div">
+    <img src="https://cdn-icons-png.flaticon.com/512/152/152756.png" />
+    <span>SpotiPobre</span>
+  </div>
+</mat-toolbar>
+
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Um por vez">
+    <h2 id="title">Converter</h2>
+    <div class="container">
+      <div class="div-inputs">
+        <mat-form-field appearance="outline" id="input-url">
+          <mat-label>URL</mat-label>
+          <input matInput [(ngModel)]="url" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" id="input-format">
+          <mat-label>Formato</mat-label>
+          <mat-select [(ngModel)]="format">
+            <mat-option value="downloadmp3">MP3</mat-option>
+            <mat-option [disabled]="true" value="downloadmp4">MP4</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div id="div-button-convert">
+        <button
+          mat-raised-button
+          [ngClass]="{ 'button--loading': converting }"
+          [disabled]="buttonDisabled()"
+          color="primary"
+          (click)="convert()"
+          id="button-convert"
+        >
+          Converter
+        </button>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<div class="footer">
+  <div class="link">
+    <a href="https://www.linkedin.com/in/eduardo-martiniano/" target="_blank"
+      >Eduardo Martiniano - {{ date }}</a
+    >
+  </div>
+</div>
